@@ -1,0 +1,122 @@
+.login-root {
+  min-height: 100vh;
+  background-color: var(--bg-sidebar); /* Dark charcoal #121212 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-family: var(--font-body);
+}
+
+.glass-card-dark {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.login-card-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 3.5rem 2.5rem;
+  border-radius: 6px;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .login-card-wrapper {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.login-header {
+  margin-bottom: 2.5rem;
+}
+
+.login-logo-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.login-logo-icon {
+  color: var(--accent-gold);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.login-brand {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.login-subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form .form-group label {
+  color: #9CA3AF;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #6B7280;
+  pointer-events: none;
+}
+
+.input-with-icon .form-control {
+  padding-left: 2.75rem;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.login-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.back-website-link {
+  color: #9CA3AF;
+  text-decoration: underline;
+}
+
+.back-website-link:hover {
+  color: var(--accent-gold);
+}

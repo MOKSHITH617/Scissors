@@ -1,0 +1,247 @@
+/* Services Page Styles */
+
+.services-page-root {
+  overflow-x: hidden;
+}
+
+/* Banner Layout */
+.page-header-banner {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.header-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.7) 100%);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF;
+  max-width: 600px;
+  padding-top: 4rem;
+}
+
+.banner-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.banner-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Services Menu Section */
+.services-menu-section {
+  padding: 6rem 0;
+}
+
+/* Tabs list */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.category-tab {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.category-tab:hover, .category-tab.active {
+  background-color: var(--bg-sidebar);
+  color: var(--accent-gold);
+  border-color: var(--bg-sidebar);
+}
+
+/* Service Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Service Card */
+.service-card {
+  padding: 2.25rem 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  border: 1px solid var(--border-color);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(201, 169, 110, 0.35);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(201, 169, 110, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-icon {
+  color: var(--accent-gold);
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.service-card-cat {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
+.service-card-body {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.service-card-name {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.service-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.service-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.meta-icon {
+  color: var(--accent-gold);
+}
+
+.service-card-book-btn {
+  width: 100%;
+  font-size: 0.75rem;
+  padding: 0.65rem;
+  border-radius: 2px;
+}
+
+/* Skeleton Loading cards */
+.skeleton-card {
+  border-color: #EEE;
+}
+
+.skeleton-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-title {
+  height: 1.5rem;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.skeleton-text {
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-meta {
+  height: 1.25rem;
+  width: 100%;
+}
+
+/* CTA Center */
+.booking-cta-section {
+  padding: 6rem 0;
+  background-color: var(--bg-sidebar);
+  color: #FFFFFF;
+}
+
+.booking-cta-section h2 {
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+.booking-cta-section p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}

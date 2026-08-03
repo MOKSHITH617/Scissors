@@ -1,0 +1,308 @@
+/* Appointments Page styling */
+
+.appointments-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header Tab card */
+.appointments-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .appointments-header-card {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+.tabs-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tab-item {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tab-item:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+.tab-item.active {
+  background-color: var(--bg-sidebar);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.new-appt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .new-appt-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Appointments grid table card */
+.appointments-grid-card {
+  padding: 2.25rem 2rem;
+  border-radius: 6px;
+}
+
+.empty-appointments {
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.empty-appointments h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.empty-appointments p {
+  font-size: 0.8rem;
+}
+
+/* Card Rows list setup */
+.appointments-list-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment-row-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  transition: var(--transition-smooth);
+}
+
+.appointment-row-card:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-gold);
+  box-shadow: 0 5px 15px rgba(201, 169, 110, 0.08);
+}
+
+.appt-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1.2;
+  min-width: 220px;
+}
+
+.appt-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(201, 169, 110, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.appt-client-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.client-name {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.client-phone {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.appt-card-details {
+  display: flex;
+  gap: 3rem;
+  flex: 2;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+  .appointment-row-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .appt-card-details {
+    padding: 0;
+    gap: 2rem;
+    width: 100%;
+  }
+  .appt-card-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.appt-card-details .detail-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.detail-item .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.detail-item .value {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.detail-item .service-text {
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.detail-item .datetime-text {
+  font-weight: 500;
+}
+
+.appt-card-status {
+  padding: 0 1.5rem;
+}
+
+.appt-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.appt-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.45rem 0.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  border: 1px solid transparent;
+  letter-spacing: 0.05em;
+}
+
+.appt-action-btn.btn-confirm {
+  background-color: rgba(34, 197, 94, 0.08);
+  color: var(--success);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.appt-action-btn.btn-confirm:hover {
+  background-color: var(--success);
+  color: #121212;
+  border-color: var(--success);
+}
+
+.appt-action-btn.btn-complete {
+  background-color: var(--accent-gold);
+  color: #121212;
+}
+
+.appt-action-btn.btn-complete:hover {
+  background-color: var(--accent-gold-hover);
+}
+
+.appt-action-btn.btn-cancel {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.appt-action-btn.btn-cancel:hover {
+  background-color: var(--danger);
+  color: #FFFFFF;
+  border-color: var(--danger);
+}
+
+.icon-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 0.75rem;
+}
+
+.appt-icon-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.appt-icon-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.appt-icon-btn.edit:hover {
+  color: var(--accent-gold);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.appt-icon-btn.delete:hover {
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.4);
+}

@@ -1,0 +1,149 @@
+.footer-root {
+  background-color: var(--bg-sidebar); /* Dark luxury backdrop #121212 */
+  color: #D1D5DB;
+  padding-top: 5rem;
+  border-top: 1px solid var(--border-color-dark);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #FFFFFF;
+}
+
+.footer-logo-icon {
+  color: var(--accent-gold);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.footer-logo-text {
+  font-family: var(--font-headings);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.footer-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-title {
+  color: #FFFFFF;
+  font-family: var(--font-headings);
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background-color: var(--accent-gold);
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.list-icon {
+  color: var(--accent-gold);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.time-highlight {
+  color: #FFFFFF;
+}
+
+.contact-link {
+  color: #D1D5DB;
+  transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 0;
+  background-color: #0E0E0E;
+}
+
+.bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 576px) {
+  .bottom-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+.copyright-text {
+  max-width: 80%;
+}
+
+.admin-portal-link {
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.admin-portal-link:hover {
+  color: var(--accent-gold);
+}

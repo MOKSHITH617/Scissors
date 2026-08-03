@@ -1,0 +1,341 @@
+/* Booking Wizard Page specific styles */
+
+.booking-banner {
+  background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80');
+}
+
+.booking-wizard-section {
+  padding: 6rem 0;
+}
+
+/* Progress bar tracker */
+.wizard-progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 0.5rem;
+}
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.step-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  transition: var(--transition-smooth);
+}
+
+.progress-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--border-color);
+  margin-bottom: 1.5rem; /* alignment adjust */
+  z-index: 1;
+}
+
+/* Step active/completed colors */
+.progress-step.active .step-num {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.progress-step.active .step-label {
+  color: var(--text-primary);
+}
+
+.progress-step.completed .step-num {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-sidebar);
+}
+
+/* Wizard card content container */
+.wizard-card-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  border-radius: 6px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-premium);
+}
+
+@media (max-width: 576px) {
+  .wizard-card-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.step-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Services Wizard Grid */
+.services-wizard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .services-wizard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-wizard-card {
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-wizard-card:hover {
+  border-color: var(--accent-gold);
+  background-color: rgba(201, 169, 110, 0.02);
+}
+
+.service-wizard-card.selected {
+  border-color: var(--accent-gold);
+  background-color: rgba(201, 169, 110, 0.05);
+  box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.1);
+}
+
+.service-wiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.service-wiz-cat {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.service-wiz-price {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.service-wiz-name {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.service-wiz-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.service-wiz-duration {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Date and time grid layout */
+.date-time-picker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .date-time-picker-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.picker-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.picker-icon {
+  color: var(--accent-gold);
+}
+
+.date-selector {
+  padding: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.time-slot-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.time-slot-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.time-slot-btn.selected {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-sidebar);
+  font-weight: 600;
+}
+
+/* Summary Box on form */
+.booking-summary-banner {
+  background-color: var(--bg-primary);
+  border-left: 2px solid var(--accent-gold);
+  padding: 1.25rem 1.75rem;
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+}
+
+.booking-summary-banner h4 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.summary-details p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.wizard-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+/* Success layout styles */
+.booking-success-screen {
+  padding: 1.5rem 0;
+}
+
+.success-icon-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(34, 197, 94, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--success);
+  margin: 0 auto 2rem;
+}
+
+.success-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.success-details-card {
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.success-details-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.status-note {
+  font-size: 0.8rem !important;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .success-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

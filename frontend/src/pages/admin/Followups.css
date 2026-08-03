@@ -1,0 +1,224 @@
+/* Follow-ups page Specific Styling */
+
+.followups-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Tab segments card */
+.followups-header-card {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.segments-wrapper {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.segment-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.segment-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+.segment-btn.active {
+  background-color: var(--bg-sidebar);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.segment-btn.active.missed {
+  color: #F87171; /* red accent for missed active segment */
+}
+
+/* Cards Grid */
+.followups-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .followups-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .followups-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card details card */
+.followup-card-item {
+  padding: 1.75rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+}
+
+.fup-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0.5rem;
+}
+
+.fup-client-name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fup-client-phone {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.fup-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+  text-align: right;
+}
+
+.fup-badge.missed {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.fup-badge.today {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.fup-badge.upcoming {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.fup-card-body {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.fup-card-body p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.fup-card-body p strong {
+  color: var(--text-primary);
+}
+
+/* Footer card actions */
+.fup-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+}
+
+.fup-action-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.fup-action-btn.wa {
+  background-color: #25D366;
+  color: #FFFFFF;
+}
+
+.fup-action-btn.wa:hover {
+  background-color: #20BA56;
+}
+
+.fup-action-btn.complete {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.fup-action-btn.complete:hover {
+  background-color: var(--accent-gold);
+  color: var(--bg-sidebar);
+}
+
+.fup-action-btn.reschedule {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.fup-action-btn.reschedule:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.empty-followups {
+  padding: 5rem 2rem;
+  border-radius: 6px;
+}
+
+.empty-followups h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.empty-followups p {
+  font-size: 0.8rem;
+}
+.success-icon {
+  color: var(--success);
+}
+#new-followup-date {
+  background-color: var(--bg-primary);
+}
